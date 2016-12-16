@@ -20,11 +20,11 @@ The test will be from Hacker Rank.
  
 ·         You will need to do some practice tests on the site first of all BEFORE taking the real one.  
           This is essential so you get used to the system and way of coding.
-·         There are no IDEs, script/text editors. This is the format of programming Amazon use for tests and interviews.
-·         Speed of how quickly you complete the test also plays a part – although good, clean concise code is paramount.
-·         I have attached Amazon Interview Prep – worth reading through the technical areas discussed
-·         Attached – Crack the Code – Chapter 6 is useful here since the logic based questions form the basis of some of the questions. Other chapters also useful to give you an idea, but the practice tests are more useful if time is tight for preparation.
-·         There are other sites you can practise on as well: http://www.topcoder.com/, http://www.codechef.com/
+\n·         There are no IDEs, script/text editors. This is the format of programming Amazon use for tests and interviews.
+\n·         Speed of how quickly you complete the test also plays a part – although good, clean concise code is paramount.
+\n·         I have attached Amazon Interview Prep – worth reading through the technical areas discussed
+\n·         Attached – Crack the Code – Chapter 6 is useful here since the logic based questions form the basis of some of the questions. Other chapters also useful to give you an idea, but the practice tests are more useful if time is tight for preparation.
+\n·         There are other sites you can practise on as well: http://www.topcoder.com/, http://www.codechef.com/
  
 Also look at these videos: https://www.youtube.com/watch?v=aClxtDcdpsQ + https://www.youtube.com/watch?v=BN0B4mOtwX0
  
