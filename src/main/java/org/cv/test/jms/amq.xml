@@ -1,0 +1,38 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns: xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jms=" http://www.springframework.org/schema/jms"
+       xmlns: amq="http://activemq.apache.org/schema/core"
+       xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+      http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms.xsd
+      http://activemq.apache.org/schema/core http://activemq.apache.org/schema/core/activemq-core.xsd"
+       profile ="TEST">
+    <amq:broker useJmx="false" persistent="false" id ="broker" deleteAllMessagesOnStartup ="true" schedulerSupport="true" >
+        <amq:transportConnectors>
+            <amq:transportConnector uri="tcp://${mq.hostname}:${mq.port}" />
+        </amq :transportConnectors>
+        <amq:plugins>
+            <amq:redeliveryPlugin>
+                <amq:redeliveryPolicyMap >
+                    <amq:redeliveryPolicyMap>
+                    <amq:defaultEntry>
+                        <amq:redeliveryPolicy
+                          maximumRedeliveries="0"
+                          maximumRedeliveryDelay="0"
+                          tempQueue="false"
+                          tempTopic="false"
+                          backOffMultiplier="0"
+                          useExponentialBackOff="false"/>
+                    </amq:defaultEntry>
+                    </amq:redeliveryPolicyMap>
+                </amq:redeliveryPolicyMap>
+            </amq:redeliveryPlugin>
+        </amq:plugins>
+    </amq:broker>
+
+    <amq:connectionFactory id="mqConnectionFactory"
+         brokerURL ="tcp://${mq.hostname}:${mq.port}" closeTimeout="0" />
+
+    <bean id ="myJmsTemplate" class="org.springframework.jms.core.JmsTemplate" >
+        <property name ="connectionFactory" ref="mqConnectionFactory" />
+    </bean>
+
+</beans>
