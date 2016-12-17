@@ -175,7 +175,6 @@ so as same as in Google 3 most things be tested:
    books: Gof :D, POSA, Fowler, JEE Patterns, etc
 
 
-   So, the general exam is like a 2 algotithms questions, 2 desing questions and one about probability proof plus
-   --------------------------------------------------------------------------------------------------------------
-   one task for security mistakes in code
------------------------------------------
+   So, the general exam is like a
+   2 algotithms questions, 2 desing questions and one about probability proof plus one task for security mistakes in code
+   ----------------------------------------------------------------------------------------------------------------------
