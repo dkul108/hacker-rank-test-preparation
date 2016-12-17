@@ -27,7 +27,8 @@ The test will be from Hacker Rank.
 
 ·         I have attached Amazon Interview Prep – worth reading through the technical areas discussed
 
-·         Attached – Crack the Code – Chapter 6 is useful here since the logic based questions form the basis of some of the questions. Other chapters also useful to give you an idea, but the practice tests are more useful if time is tight for preparation.
+·         Attached – Crack the Code – Chapter 6 is useful here since the logic based questions form the basis of some of the questions.
+          Other chapters also useful to give you an idea, but the practice tests are more useful if time is tight for preparation.
 
 ·         There are other sites you can practise on as well: http://www.topcoder.com/, http://www.codechef.com/
  
@@ -51,7 +52,8 @@ Coding
 ------------
 Expect to be asked to write syntactically correct code—no pseudo code. If you feel a bit rusty coding without an IDE or
 coding in a specific language, it’s probably a good idea to dust off the cobwebs and get comfortable coding with a pen and
-paper. The most important thing a Software Development Engineer does at Amazon is write scalable, robust, and welltested code. These are the main criteria by which your code will be evaluated, so make sure that you check for edge cases
+paper. The most important thing a Software Development Engineer does at Amazon is write scalable, robust, and welltested code.
+hese are the main criteria by which your code will be evaluated, so make sure that you check for edge cases
 and validate that no bad input can slip through. A few missed commas or typos here and there aren’t that big of a deal, but
 the goal is to write code that’s as close to production ready as possible. This is your chance to show off your coding ability
 
@@ -60,7 +62,8 @@ Object-Oriented Design
 Good design is paramount to extensible, bug free, long-lived code. It’s possible to solve any given software problem in an
 almost limitless number of ways, but when software needs to be extensible and maintainable, good software design is
 critical to success. Using Object-oriented design best practices is one way to build lasting software. You should have a
-working knowledge of a few common and useful design patterns as well as know how to write software in an objectoriented way, with appropriate use of inheritance and aggregation. You probably won’t be asked to describe the details of
+working knowledge of a few common and useful design patterns as well as know how to write software in an objectoriented way,
+with appropriate use of inheritance and aggregation. You probably won’t be asked to describe the details of
 how specific design patterns work, but expect to have to defend your design choices.
 
 Databases
@@ -93,4 +96,79 @@ TCP/IP, to socket connections. We aren’t looking for network engineer qualific
 fundamentals of how the web works is a requirement.
 
 
+This was a relatively long list of topics to review, and might seem somewhat overwhelming. Your interviewers won’t be
+evaluating your ability to memorize all of the details about each of these topics. What they will be looking for is your ability
+to apply what you know to solve problems efficiently and effectively. Given a limited amount of time to prepare for a
+technical interview, practicing coding outside of an IDE and reviewing CS fundamentals will likely yield the best results for
+your time.
 
+
+========================================================================================================================
+Further Reading and trainings:
+---------------------------------------
+
+HOW can you get better at algorithms???
+-take an "DS" and "Algo" course and practice from geeksforgeeks.org
+as simple as that
+
+Can I read about previous Amazon interviews?
+http://www.geeksforgeeks.org/amazon-interview-experience-set-317-sde-1-off-campus/
+etc (http://www.geeksforgeeks.org/tag/amazon/)
+
+https://projecteuler.net/archives
+
+https://codility.com/
+
+
+so as same as in Google 3 most things be tested:
+1 Coding (proficiently, quickly (but ask questions), compiled code written on whiteboard)
+2 Algorithms
+    Graphs:
+        search BFS, DFS,
+        shortest path - Dijkstra's algorithm, Bellman Ford, Floyd - Warshall
+        max flow - Ford - Fulkerson
+
+    Dynamic Programming:
+        1D, 2D, ..., correctness algorithm, relation (math tool)
+        (greedy)
+
+    Data Structures:
+        arrays, maps, queues, stacks, binary search trees (BST), self balansing BST, B-trees, segment/interval trees, KD - trees
+        string datastructures: tries (with classical alg-s of string matching, sliding window)
+
+    Complexity: need to know your computability and complexity classes - Big O, Omega, Theta, NP complete
+
+    Discrete Mathematic, discrete probability, simple probability proofs etc
+
+    Books recommended -  "Introduction to Algorithms" - by Thomas H. Cormen & co, "Algorithms" by Sanjoy Dasgupta
+    Web sites: spoj.com/problems/classical/ , codeforces.com , train.usaco.org
+
+    eg classical example - you will get points on map task - big field of static points and you haave to find k closest neighboors,
+    proof it fast and analize complexity, you will be asked to write real code and if you complete same task complexity maay be increased,
+    like a 3D
+
+
+3 Design
+  Building large production software
+    (eg how to design Google Hangouts (Chat) - how user communicates via browser with server with http
+        and how to do it well, how to build up server - MVC etc bla bla, chat message, user, conversation - as model , etc bla blah,
+        should properly describe what code runs on client , server, http, database :D
+     then complexity grows - if users too much, if web servers too much , how to scale - Load Balancers, DB slaves and propagation between them,
+     secure encrypted protocols)
+
+     -multitier
+     -orthgonality
+     -separation of concerns
+     -separate component in order to assign to different teams
+     -estimation quaestions (how many people/how long it would take to build/how much money do you need)
+     (but ask questions!!! - like is it real time chat (via web sockets), how many connections)
+     -network protocols and how do they work (DNS, HTTP, UDP, SSL/TLS, Web Sockets, compression)
+     -optimization
+
+
+
+   books: Gof :D, POSA, Fowler, JEE Patterns, etc
+
+
+   So, the general exam is like a 2 algotithms questions, 2 desing questions and one about probability proof plus
+   one task for security mistakes in code

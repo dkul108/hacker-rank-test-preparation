@@ -1,28 +1,5 @@
 package org.cv.test.arrays;
 
-/*
-Algorithms
-Your interview with Amazon will not be focused on rote memorization of algorithms; however, having a good
-understanding of the most common algorithms will likely make solving some of the questions we ask a lot easier. Consider
-reviewing traversals, divide and conquer, and any other common algorithms you feel might be worth brushing up on. For
-example, it might be good to know how and when to use a breadth-first search versus a depth-first search, and what the
-tradeoffs are. Knowing the runtimes, theoretical limitations, and basic implementation strategies of different classes of
-algorithms is more important than memorizing the specific details of any given algorithm.
-
-Coding
-Expect to be asked to write syntactically correct code—no pseudo code. If you feel a bit rusty coding without an IDE or
-coding in a specific language, it’s probably a good idea to dust off the cobwebs and get comfortable coding with a pen and
-paper. The most important thing a Software Development Engineer does at Amazon is write scalable, robust, and welltested code. These are the main criteria by which your code will be evaluated, so make sure that you check for edge cases
-and validate that no bad input can slip through. A few missed commas or typos here and there aren’t that big of a deal, but
-the goal is to write code that’s as close to production ready as possible. This is your chance to show off your coding ability
-
-Object-Oriented Design
-Good design is paramount to extensible, bug free, long-lived code. It’s possible to solve any given software problem in an
-almost limitless number of ways, but when software needs to be extensible and maintainable, good software design is
-critical to success. Using Object-oriented design best practices is one way to build lasting software. You should have a
-working knowledge of a few common and useful design patterns as well as know how to write software in an objectoriented way, with appropriate use of inheritance and aggregation. You probably won’t be asked to describe the details of
-how specific design patterns work, but expect to have to defend your design choices.
- */
 public class RotateMatrix {
     public static int[][] rotateMatrixRight(int[][] matrix) {
         int w = matrix.length;
@@ -60,6 +37,50 @@ public class RotateMatrix {
         }
     }
 
+    //Time - O(N), Space - O(N)
+    public static int[][] rotateRightSquareMatrixNoNewInst(int[][] matrix) {
+        int n = matrix.length;
+        for (int i = 0; i < n / 2; i++) {
+            int last = n - 1 - i;
+            for (int j = i; j < last; j++) {
+                //save top
+                int top = matrix[i][j];
+                //left->top
+                matrix[i][j] = matrix[last - j][i];
+                //bottome->left
+                matrix[last - j][i] = matrix[last][last - j];
+                //right->bottom
+                matrix[last][last - j] = matrix[j][last];
+                //top->right
+                matrix[j][last] = top;
+            }
+        }
+        return matrix;
+    }
+
+    //https://www.youtube.com/watch?v=aClxtDcdpsQ
+    public static int[][] realRotateSquareMatrixRightByLayers(int[][] matrix) {
+        int n = matrix.length - 1;
+        for (int layer = 0; layer < n / 2; layer++) {
+            int first = layer;
+            int last = n - layer;// - 1;
+            for (int i = first; i < last; i++) {
+                int offset = i - first;
+                //save top
+                int top = matrix[first][i];
+                //left->top
+                matrix[first][i] = matrix[last - offset][first];
+                //bottome->left
+                matrix[last - offset][first] = matrix[last][last - offset];
+                //right->bottom
+                matrix[last][last - offset] = matrix[i][last];
+                //top->right
+                matrix[i][last] = top;
+            }
+        }
+        return matrix;
+    }
+
     public static void main(String... args) {
         int[][] array = {
                 {1, 2, 3, 4, 5},
@@ -72,6 +93,20 @@ public class RotateMatrix {
         print(rotateMatrixRight(array));
         System.out.println("\n left");
         print(rotateMatrixLeft(array));
+
+        int[][] squareMatrix = {
+                {1, 2, 3, 4, 5},
+                {5, 6, 7, 8, 4},
+                {9, 0, 1, 2, 3},
+                {3, 4, 5, 6, 1},
+                {2, 6, 9, 1, 7}
+        };
+        System.out.println("initial square matrix");
+        print(squareMatrix);
+        System.out.println("\n rotate square matrix right no new matrix instance");
+        print(rotateRightSquareMatrixNoNewInst(squareMatrix));
+        System.out.println("\n rotate square matrix right by layers no new matrix instance");
+        print(realRotateSquareMatrixRightByLayers(squareMatrix)); //<-here is a proper solution
     }
 
 }
