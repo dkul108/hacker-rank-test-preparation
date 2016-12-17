@@ -121,8 +121,12 @@ https://codility.com/
 
 
 so as same as in Google 3 most things be tested:
-1 Coding (proficiently, quickly (but ask questions), compiled code written on whiteboard)
+1 Coding
+---------
+(proficiently, quickly (but ask questions), compiled code written on whiteboard)
+
 2 Algorithms
+-----------
     Graphs:
         search BFS, DFS,
         shortest path - Dijkstra's algorithm, Bellman Ford, Floyd - Warshall
@@ -149,6 +153,7 @@ so as same as in Google 3 most things be tested:
 
 
 3 Design
+---------
   Building large production software
     (eg how to design Google Hangouts (Chat) - how user communicates via browser with server with http
         and how to do it well, how to build up server - MVC etc bla bla, chat message, user, conversation - as model , etc bla blah,
@@ -171,4 +176,6 @@ so as same as in Google 3 most things be tested:
 
 
    So, the general exam is like a 2 algotithms questions, 2 desing questions and one about probability proof plus
+   --------------------------------------------------------------------------------------------------------------
    one task for security mistakes in code
+-----------------------------------------
