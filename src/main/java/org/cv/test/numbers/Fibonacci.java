@@ -1,4 +1,4 @@
-package org.cv.test.diff;
+package org.cv.test.numbers;
 
 public class Fibonacci {
     public static long fibonacci(int n) {
