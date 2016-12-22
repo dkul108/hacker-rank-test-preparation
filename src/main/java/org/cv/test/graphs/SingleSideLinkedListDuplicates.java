@@ -32,8 +32,7 @@ public class SingleSideLinkedListDuplicates {
         node_3.next = node_4;
         LinkedListNode node_5 = new LinkedListNode(4);
         node_4.next = node_5;
-        LinkedListNode node_6 = new LinkedListNode(4);
-        node_5.next = node_6;
+        node_5.next = new LinkedListNode(4);
         return node_1;
     }
 

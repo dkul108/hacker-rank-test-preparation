@@ -28,10 +28,10 @@ public class RotateMatrix {
     public static void print(int[][] matrix) {
         int w = matrix.length;
         int h = matrix[0].length;
-        for (int i = 0; i < w; i++) {
+        for (int[] aMatrix : matrix) {
             System.out.println("[");
             for (int j = 0; j < h; j++) {
-                System.out.print(matrix[i][j] + ",");
+                System.out.print(aMatrix[j] + ",");
             }
             System.out.println("]");
         }

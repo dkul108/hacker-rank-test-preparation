@@ -26,10 +26,6 @@ public class Graph {
         }
     }
 
-    public boolean hasNodes() {
-        return !edges.isEmpty();
-    }
-
     public static void main(String[] args) {
         Graph g = new Graph();
         g.addEdge("A", "B");

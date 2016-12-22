@@ -15,6 +15,7 @@ public class TreeTranspass {
         }
     }
 
+    @SuppressWarnings("unchecked")
     public static List traversePreRecursive(Node node) {
         if (node == null) return new ArrayList();
 

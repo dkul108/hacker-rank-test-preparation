@@ -3,7 +3,7 @@ package org.cv.test.sorting;
 
 import java.util.Arrays;
 
-public class MergeSorted2 {
+public class MergeSorted {
     private int[] array;
     private int[] tempMergArr;
     private int length;
@@ -11,7 +11,7 @@ public class MergeSorted2 {
     public static void main(String a[]){
 
         int[] inputArr = {45,23,11,89,77,98,4,28,65,43};
-        MergeSorted2 mms = new MergeSorted2();
+        MergeSorted mms = new MergeSorted();
         mms.sort(inputArr);
         System.out.println(Arrays.toString(inputArr));
     }
@@ -38,9 +38,7 @@ public class MergeSorted2 {
 
     private void mergeParts(int lowerIndex, int middle, int higherIndex) {
 
-        for (int i = lowerIndex; i <= higherIndex; i++) {
-            tempMergArr[i] = array[i];
-        }
+        System.arraycopy(array, lowerIndex, tempMergArr, lowerIndex, higherIndex + 1 - lowerIndex);
         int i = lowerIndex;
         int j = middle + 1;
         int k = lowerIndex;
@@ -59,6 +57,6 @@ public class MergeSorted2 {
             k++;
             i++;
         }
-
     }
+
 }

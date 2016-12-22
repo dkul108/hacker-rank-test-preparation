@@ -207,7 +207,6 @@ public class Tree<T> {
         private T total;
         private Map<String, Node> children = new LinkedHashMap<String, Node>();
         private T firstSummarizedItem = null;
-        ;
 
         public void add(Iterator<GroupingTotalTreeLevel> levels, T t) {
             add(this, levels, t);
