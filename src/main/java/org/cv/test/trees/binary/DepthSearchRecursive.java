@@ -1,4 +1,4 @@
-package org.cv.test.graphs;
+package org.cv.test.trees.binary;
 
 
 import org.cv.test.graphs.search.iterable.Graph;
