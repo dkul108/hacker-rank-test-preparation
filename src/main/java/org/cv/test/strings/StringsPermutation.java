@@ -1,6 +1,8 @@
 package org.cv.test.strings;
 
-
+/**
+ * see really better option here https://www.nayuki.io/page/next-lexicographical-permutation-algorithm
+ */
 public class StringsPermutation {
 
     public static void permutation(String str) {

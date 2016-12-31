@@ -54,7 +54,7 @@ public class RemoveDuplicates {
                 if (arr[x] == arr[y]) break;
             }
             if (y == tail){
-                System.out.println("x:" + x + " TAIL #: " + tail + " TAIL: "+arr[tail]);
+                System.out.println("x:" + x + " TAIL #: " + tail + " TAIL: "+arr[tail] + " arr[x]="+ arr[x]);
                 arr[tail] = arr[x];
                 tail++;
             }
@@ -73,9 +73,11 @@ public class RemoveDuplicates {
 
         return arr;
     }
+
     public static void main(String args[]){
 
         String result = new String(removeDupes(new char[]{'a', 'b', 'c', 'd', 'a'}));
+        System.out.println(result);
         assert "abcd".equals(result) : "abcda should return abcd but it returns: " + result;
 
         result = new String(removeDupes(new char[]{'a', 'a', 'a', 'a'}));
