@@ -10,6 +10,17 @@ public class BinarySearch {
 
         System.out.println("Index: " + searchBinary(9, arr, 0, arr.length - 1));
         assert 9 == searchBinary(9, arr, 0, arr.length - 1) : "incorrect index found";
+
+        System.out.println(21/20);
+        System.out.println(21%20);
+
+        System.out.println(1/20);
+        System.out.println(1%20);
+
+        System.out.println(32/20);
+        System.out.println(32%20);
+
+
     }
 
     static int searchBinary(int number, int [] arr, int low, int hight) {
