@@ -29,4 +29,20 @@ public class Stack<T> {
     public boolean isFull() {
         return (top == maxSize - 1);
     }
+
+    public static void main (String[] args) {
+            String s = "[()]{}{[()()]()}";
+            //System.out.println(s);
+            Stack<Character> stack = new Stack<>(s.length());
+            boolean balanced = true;
+            for(char c : s.toCharArray()) {
+                if(c == '[' || c == '{' || c == '(') {
+                    stack.push(c);
+                } else if (c == ']' || c == '}' || c == ')' ) {
+                    char c2 = stack.pop();
+                    balanced =  (c == ']' && c2 == '[') ||  (c == '}' && c == '{') || (c == ')' && c =='(');
+                }
+            }
+            System.out.println(balanced ? "balanced" : "not balanced");
+    }
 }
