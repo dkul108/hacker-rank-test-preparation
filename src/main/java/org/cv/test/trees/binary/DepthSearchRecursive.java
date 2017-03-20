@@ -32,7 +32,7 @@ public class DepthSearchRecursive {
         }
 
         if (root.value.equals(searched)) {
-            System.out.println("Foind! " + root.toString());
+            System.out.println("Found! " + root.toString());
         }
 
         for(Node child : root.getChildren()) {

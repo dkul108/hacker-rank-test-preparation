@@ -178,3 +178,8 @@ so as same as in Google 3 most things be tested:
    So, the general exam is like a
    2 algotithms questions, 2 desing questions and one about probability proof plus one task for security mistakes in code
    ----------------------------------------------------------------------------------------------------------------------
+
+links :
+http://sobit.me/2016/07/08/amazon-software-engineer-interview/
+http://bigocheatsheet.com/
+todo: add more

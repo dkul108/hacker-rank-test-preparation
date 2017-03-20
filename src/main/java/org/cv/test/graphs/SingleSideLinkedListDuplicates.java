@@ -20,7 +20,14 @@ public class SingleSideLinkedListDuplicates {
         deleteDups2NoBuffer(node_1);
         System.out.println("no duplicates");
         print(node_1);
+
+        printReversedRecursive(node_1);
+
+        System.out.println("reversed");
+        print(reverse(node_1));
     }
+
+
 
     private static LinkedListNode setupLinkedNodes() {
         LinkedListNode node_1 = new LinkedListNode(1);
@@ -78,6 +85,31 @@ public class SingleSideLinkedListDuplicates {
                 current = current.next;
             }
         }
+    }
+
+
+    public static LinkedListNode reverse(LinkedListNode head) {
+        LinkedListNode prev = null;
+        LinkedListNode curr= head;
+        LinkedListNode next = null;
+
+        while(curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+
+        return head;
+    }
+
+    private static void printReversedRecursive(LinkedListNode node) {
+        if(node == null) {
+            return;
+        }
+        printReversedRecursive(node.next);
+        System.out.println("Reversed recursively: "+node.data);
     }
 
     private static class LinkedListNode {
