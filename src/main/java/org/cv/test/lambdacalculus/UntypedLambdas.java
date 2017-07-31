@@ -55,11 +55,14 @@ public interface UntypedLambdas {
 
     Lambda print = x -> print(x);
 
+    //2 cases, both are alternatives to Alan Turing Machine:
 
+    //IKS combinators
     Lambda I = x -> x;
     Lambda K = x -> y -> x;
     Lambda S = x -> y -> z -> x.$(z).$(y.$(z));
 
+    //labda calculus
     Lambda pair = p -> a -> b -> p.$(a).$(b);
     Lambda first = p -> p.$(a -> b -> a);
     Lambda second = p -> p.$(a -> b -> b);
