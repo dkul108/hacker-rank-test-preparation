@@ -51,6 +51,8 @@ public class LinkedListLoopDetector {
         }
     }
 
+
+
     // Function to print the linked list
     void printList(Node node) {
         while (node != null) {

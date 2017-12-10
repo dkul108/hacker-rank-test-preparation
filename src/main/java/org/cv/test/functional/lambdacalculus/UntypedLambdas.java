@@ -1,4 +1,4 @@
-package org.cv.test.lambdacalculus;
+package org.cv.test.functional.lambdacalculus;
 
 import java.util.Objects;
 

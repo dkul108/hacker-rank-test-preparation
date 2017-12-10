@@ -1,4 +1,4 @@
-package org.cv.test.lambdacalculus;
+package org.cv.test.functional.lambdacalculus;
 
 public interface Typed {
     interface Fun<A, B> {

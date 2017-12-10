@@ -1,4 +1,4 @@
-package org.cv.test.monades;
+package org.cv.test.functional.monades;
 
 
 import java.util.function.Function;
