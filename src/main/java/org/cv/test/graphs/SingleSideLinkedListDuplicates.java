@@ -2,6 +2,7 @@ package org.cv.test.graphs;
 
 
 import java.util.HashSet;
+import java.util.Set;
 
 public class SingleSideLinkedListDuplicates {
 
@@ -52,7 +53,7 @@ public class SingleSideLinkedListDuplicates {
     }
 
     public static void deleteDups(LinkedListNode n) {
-        HashSet<Integer> table = new HashSet<>();
+        Set<Integer> table = new HashSet<>();
         LinkedListNode previous = null;
         while (n != null) {
             if (table.contains(n.data)) {

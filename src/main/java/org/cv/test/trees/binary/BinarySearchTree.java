@@ -1,5 +1,7 @@
 package org.cv.test.trees.binary;
 
+import java.util.Arrays;
+
 public class BinarySearchTree {
 
     private Node root;
@@ -56,6 +58,8 @@ public class BinarySearchTree {
 
     // Driver Program to test above functions
     public static void main(String[] args) {
+        int [] arr = {3,2,1};
+        Arrays.sort(arr);
         BinarySearchTree tree = new BinarySearchTree();
 
         /* Let us create following BST
