@@ -6,16 +6,16 @@ import java.util.List;
 public class ListPrefixes {
 
     public static void main(String[] args) {
-        final List a = List.<String>of("a", "b", "c", "d");
+        final List<String> a = List.of("a", "b", "c", "d");
 
-        final List<List<String>> prefixes = getPrefixesON2NoContinuation(a);
-        System.out.println(prefixes);
+        System.out.println(getPrefixes_O_N2_NoContinuation(a));
+        System.out.println(getPrefixes_O_N_NoContinuation(a));
     }
 
-    private static List<List<String>> getPrefixesON2NoContinuation(List a) {
-        final List<List<String>> prefixes = new ArrayList<List<String>>();
+    private static List<List<String>> getPrefixes_O_N2_NoContinuation(List<String> a) {
+        final List<List<String>> prefixes = new ArrayList<>();
         for (int i = 0; i < a.size(); i++) {
-            final List curr = new ArrayList<String>();
+            final List<String> curr = new ArrayList<>();
 
             curr.add(a.get(i));
             prefixes.add(curr);
@@ -26,6 +26,16 @@ public class ListPrefixes {
                     curr.add(0, prev.get(j));
                 }
             }
+        }
+        return prefixes;
+    }
+
+    private static List<List<String>> getPrefixes_O_N_NoContinuation(List<String> a) {
+        final List<List<String>> prefixes = new ArrayList<>();
+        final ArrayList<String> curr = new ArrayList<>();
+        for (int i = 0; i < a.size(); i++) {
+            curr.add(a.get(i));
+            prefixes.add((List<String>) curr.clone());
         }
         return prefixes;
     }
